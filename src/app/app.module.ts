@@ -7,6 +7,11 @@ import { MainComponent } from './components/main/main.component';
 import { UploadDokumenComponent } from './components/upload-dokumen/upload-dokumen.component';
 import { FormDataPribadiComponent } from './components/form-data-pribadi/form-data-pribadi.component';
 import { DataJaminanComponent } from './components/data-jaminan/data-jaminan.component';
+import { ListKontrakComponent } from './components/list-kontrak/list-kontrak.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { PerhitunganComponent } from './components/perhitungan/perhitungan.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { DataJaminanComponent } from './components/data-jaminan/data-jaminan.com
     MainComponent,
     UploadDokumenComponent,
     FormDataPribadiComponent,
-    DataJaminanComponent
+    DataJaminanComponent,
+    ListKontrakComponent,
+    PerhitunganComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

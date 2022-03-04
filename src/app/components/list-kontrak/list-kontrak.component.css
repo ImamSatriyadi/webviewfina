@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    border:thin solid #CCCCCC;
+    background-color:#FEFDFE;
+    text-align: center;
+  }
+
+.form-group{
+    margin-bottom: 10px;
+}

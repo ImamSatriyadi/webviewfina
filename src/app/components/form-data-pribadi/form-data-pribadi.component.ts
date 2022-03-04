@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiServiceService } from 'src/app/shared/api-service.service';
 
 @Component({
   selector: 'app-form-data-pribadi',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormDataPribadiComponent implements OnInit {
 
-  constructor() { }
+  noKontrak:string="null";
+  constructor(private apiservice:ApiServiceService, private actRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.noKontrak = this.actRoute.snapshot.params['id'];
   }
 
 }

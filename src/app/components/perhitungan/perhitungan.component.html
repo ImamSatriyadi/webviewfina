@@ -1,0 +1,78 @@
+
+<div class="container" style="margin-top:65px;margin-bottom: 65px;">
+    <div class="card mb-2">
+        <div class="card-body">
+            <h6 class="card-title"  style="text-align: center;">Outstanding</h6>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Sisa Outstanding</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1"[(ngModel)]="'Rp. ' + data.sisaOutstanding" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Sisa Tenor</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1"[(ngModel)]="data.sisaTenor" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Angsuran / bulan</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1"[(ngModel)]="'Rp. ' + data.angsuran" aria-describedby="emailHelp">
+            </div>
+        </div>
+    </div>
+    <div class="card mb-2">
+        <div class="card-body">
+            <h6 class="card-title" style="text-align: center;">Biaya dan Kewajiban Konsumen Baru</h6>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Biaya Admin</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1"[(ngModel)]="'Rp. ' + data.admin" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text" style="font-size: small;">*Biaya mencakup biaya admin, fidusia, dan endorse asuransi</div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-2">
+        <div class="card-body">
+            <h6 class="card-title" style="text-align: center;">Biaya dan Kewajiban Konsumen Lama</h6>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Angsuran</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1" [(ngModel)]="'Rp. ' + data.angsuran" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Denda Keterlambatan</label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1" [(ngModel)]="'Rp. ' + data.denda" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Gantungan Biaya Pengurusan STNK/BPKB </label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1" [(ngModel)]="'Rp. ' + data.gantungan_pengurusan" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Gantungan Biaya Penanganan Asuransi </label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1" [(ngModel)]="'Rp. ' + data.gantungan_asuransi"aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Deposit </label>
+                <input type="email" class="form-control" style="font-size: small;" id="exampleInputEmail1" [(ngModel)]="'Rp. ' + data.deposit" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label" style="font-size: small;">Total Pembayaran </label>
+                <input type="email" class="form-control" style="font-size: small;font-weight: bold;" id="exampleInputEmail1"[(ngModel)]="data.angsuran + data.denda + data.gantungan_pengurusan + data.gantungan_asuransi - data.deposit" aria-describedby="emailHelp">
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg mb-1" style="left: 0;height:60px;padding:10px;width:100%;background-color: #4DAAB9;position: fixed;top:0;">
+    <a class="navbar-brand" style="color: #FFFFFF;">
+       Perhitungan Over Kredit
+    </a>
+</nav>
+
+<div class="footer">
+    <a routerLink="/list_kontrak">
+        <button class="btn btn-md btn-primary" style="float: left;margin-left: 5px;width:45%;">
+            <i class="fa fa-angle-left" style="margin-right: 2%;"></i> Kembali
+        </button>
+    </a>
+    <a [routerLink]="['/form_data_pribadi', noKontrak]">
+        <button type="button" class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="float: right;margin-left: 5px;width:45%;">
+            Setuju <i class="fa fa-angle-right" style="margin-right: 2%;"></i>
+        </button>
+    </a>    
+</div>
