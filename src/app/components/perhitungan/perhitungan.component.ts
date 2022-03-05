@@ -15,6 +15,7 @@ export class PerhitunganComponent implements OnInit {
   ngOnInit(): void {
     this.dataPerhitungan();
     this.noKontrak=this.actRoute.snapshot.params['id'];
+    this.rollBack();
   }
 
   dataPerhitungan(){
@@ -22,6 +23,13 @@ export class PerhitunganComponent implements OnInit {
     .subscribe((res:any)=>{
           this.data = res;
           console.log(this.data);
+      })
+  }
+
+  rollBack(){
+    return this.apiservice.rollBack()
+    .subscribe((res:any)=>{
+
       })
   }
 }
