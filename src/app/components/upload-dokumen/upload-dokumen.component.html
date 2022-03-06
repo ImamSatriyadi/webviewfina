@@ -34,17 +34,17 @@
     </div>
 </div>
 <div class="footer">
-    <a [routerLink]="['/form_data_pribadi/', noKontrak]">
+    <a [routerLink]="['/form_data_pribadi/', noKontrak, email]">
         <button class="btn btn-md btn-primary" style="float: left;margin-left: 5px;width:45%;">
             <i class="fa fa-angle-left" style="margin-right: 2%;"></i> Kembali
         </button>
     </a>
 
    <button  [disabled] = "!selectedFilesKTP 
-                            && !selectedFilesKTPPasangan
-                             && !selectedFilesKK
-                             && !selectedFilesNPWP
-                             && !selectedFilesSPOK"
+                            || !selectedFilesKTPPasangan
+                             || !selectedFilesKK
+                             || !selectedFilesNPWP
+                             || !selectedFilesSPOK"
         class="btn btn-md btn-primary" type="submit" style="float: right;margin-left: 5px;width:45%;">
       Simpan <i class="fa fa-angle-right" style="margin-left: 2%;"></i>
    </button>

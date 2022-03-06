@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 
 
-const DOMAIN_API = 'http://localhost:8081/fina_overkredit/api';
+const DOMAIN_API = 'https://fina-overkredit-api.herokuapp.com/fina_overkredit/api';
 const header    = {
     headers : new HttpHeaders({'Content-type' : 'application/json' })
 }
@@ -39,9 +39,10 @@ export class ApiServiceService {
   //  }
 
  
-  upload(file: File, no_kontrak:string): Observable<HttpEvent<any>> {
+  upload(file: File, nameDoc:string, no_kontrak:string): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
     formData.append('file', file);
+    formData.append('nameDoc', nameDoc);
     formData.append('no_kontrak', no_kontrak);
     const req = new HttpRequest('POST', `${DOMAIN_API}/newcustomer/upload`, formData, {
       reportProgress: true,

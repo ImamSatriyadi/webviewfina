@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { PerhitunganComponent } from './components/perhitungan/perhitungan.component';
+import { SuccessPageComponent } from './components/success-page/success-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PerhitunganComponent } from './components/perhitungan/perhitungan.compo
     FormDataPribadiComponent,
     DataJaminanComponent,
     ListKontrakComponent,
-    PerhitunganComponent
+    PerhitunganComponent,
+    SuccessPageComponent
   ],
   imports: [
     BrowserModule,

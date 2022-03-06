@@ -10,11 +10,14 @@ import { ApiServiceService } from 'src/app/shared/api-service.service';
 export class PerhitunganComponent implements OnInit {
   data:any;
   noKontrak:string = "null";
+  email:string="";
+
   constructor(private apiservice:ApiServiceService, private actRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.dataPerhitungan();
     this.noKontrak=this.actRoute.snapshot.params['id'];
+    this.email= this.actRoute.snapshot.params['email'];
     this.rollBack();
   }
 

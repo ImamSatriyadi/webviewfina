@@ -1,30 +1,36 @@
-<nav class="navbar navbar-expand-lg mb-1" style="padding:10px;background-color: #4DAAB9;">
-    <a class="navbar-brand" style="color: #FFFFFF;">
-       Over Kredit 
-    </a>
-</nav>
-<div class="container">
+<div class="container" style="margin-top:65px;margin-bottom: 65px;">
     <div class="row mb-3" style="text-align: justify;padding: 5px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis elit a neque elementum convallis.
         Mauris lorem magna, accumsan eget finibus eu, hendrerit non lacus. Maecenas consequat faucibus libero et finibus. 
     </div>
-    <div class="row" style="text-align: justify;padding: 5px;">
-        <div class="alert alert-primary " style="padding: 15px;margin-bottom: 5px;">
+    <div class="row" style="text-align: justify;">
+    <a style="padding: 5px;text-decoration: none;" href="https://fina-overkredit-api.herokuapp.com/fina_overkredit/api/newcustomer/files/SURAT PERMOHONAN OVER KREDIT.docx">
+        <div class="alert alert-primary">
             Surat Permohonan Over Kredit
             <i class="fa fa-download" style="float:right;vertical-align: middle;margin-top: 2px;"></i>
         </div>
-        <div class="alert alert-primary" style="padding: 15px;margin-bottom: 5px;">
+    </a>
+    <a style="padding: 5px;text-decoration: none;" href="https://fina-overkredit-api.herokuapp.com/fina_overkredit/api/newcustomer/files/SURAT PERMOHONAN OVER KREDIT AHLI WARIS.docx">
+        <div class="alert alert-primary">
             Surat Permohonan (Ahli Waris)
             <i class="fa fa-download" style="float:right;vertical-align: middle;margin-top: 2px;"></i>
         </div>
-        <div class="alert alert-primary" style="padding: 15px;margin-bottom: 5px;">
+    </a>    
+    <a style="padding: 5px;text-decoration: none;" href="https://fina-overkredit-api.herokuapp.com/fina_overkredit/api/newcustomer/files/SURAT PERNYATAAN DAN KUASA.docx">
+        <div class="alert alert-primary">
             Surat Kuasa Over kredit
             <i class="fa fa-download" style="float:right;vertical-align: middle;margin-top: 2px;"></i>
         </div>
+    </a>    
     </div>
 </div>
+<nav class="navbar navbar-expand-lg mb-1" style="left: 0;height:60px;padding:10px;width:100%;background-color: #4DAAB9;position: fixed;top:0;">
+    <a class="navbar-brand" style="color: #FFFFFF;">
+      Over Kredit
+    </a>
+ </nav>
 <div class="footer">
-    <a routerLink="/list_kontrak">
+    <a [routerLink]="['/list_kontrak', email]">
         <button class="btn btn-md btn-primary form-control">Ajukan Over Kredit</button>
     </a>
 </div>

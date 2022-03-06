@@ -5,16 +5,18 @@ import { FormDataPribadiComponent } from './components/form-data-pribadi/form-da
 import { ListKontrakComponent } from './components/list-kontrak/list-kontrak.component';
 import { MainComponent } from './components/main/main.component';
 import { PerhitunganComponent } from './components/perhitungan/perhitungan.component';
+import { SuccessPageComponent } from './components/success-page/success-page.component';
 import { UploadDokumenComponent } from './components/upload-dokumen/upload-dokumen.component';
 
 const routes: Routes = [
   {path : '', redirectTo: '/main', pathMatch :'full'},
-  {path : 'main', component : MainComponent},
-  {path : 'list_kontrak', component : ListKontrakComponent},
-  {path : 'upload_dokumen/:id', component : UploadDokumenComponent},
-  {path : 'perhitungan/:id', component : PerhitunganComponent},
-  {path : 'form_data_pribadi/:id', component : FormDataPribadiComponent},
-  {path : 'data_jaminan/:id', component : DataJaminanComponent}
+  {path : 'main/:email', component : MainComponent},
+  {path : 'list_kontrak/:email', component : ListKontrakComponent},
+  {path : 'upload_dokumen/:id/:email', component : UploadDokumenComponent},
+  {path : 'perhitungan/:id/:email', component : PerhitunganComponent},
+  {path : 'form_data_pribadi/:id/:email', component : FormDataPribadiComponent},
+  {path : 'data_jaminan/:id/:email', component : DataJaminanComponent},
+  {path : 'success/:email', component : SuccessPageComponent}
 ];
 
 @NgModule({

@@ -3,7 +3,7 @@
         <div class="alert alert-primary mb-1" style="padding: 15px;margin-bottom: 5px;">
             <div class="row">
                 <div class="col-2 pt-3 ps-4">
-                    <input type="radio" name="radio" (click)="changeParam(listKontrak.no_kontrak)" class="form-check-input">
+                    <input type="radio" [disabled]="listKontrak.loan_status == 'assign coll' || listKontrak.pengajuan_overkredit != 'NULL'" name="radio" (click)="changeParam(listKontrak.no_kontrak)" class="form-check-input">
                 </div>
                 <div class="col-6">
                     <h4 style="font-size: small;">{{listKontrak.no_kontrak}}</h4>
@@ -23,15 +23,19 @@
                         {{((listKontrak.tenor-listKontrak.sisa_tenor) / listKontrak.tenor)*100 | number:'1.0-0'}}%
                     </span>    
                 </div>
-
             </div>
-
+            <div *ngIf="listKontrak.loan_status == 'assign coll'" class="alert alert-danger mt-2" style="font-size:small;">
+                <i class="fa fa-warning" style="margin-right: 10px;"></i>DALAM PENANGANAN BHJP
+            </div>
+            <div  *ngIf="listKontrak.pengajuan_overkredit != 'NULL'" class="alert alert-success mt-2" style="font-size:small;">
+                <i class="fa fa-check-circle" style="margin-right: 10px;"></i>DALAM PENGAJUAN OVER KREDIT
+            </div>
         </div>
     </div>
 </div>
 
 <div class="footer">
-    <a routerLink="/main">
+    <a [routerLink]="['/main', email]">
         <button class="btn btn-md btn-primary" style="float: left;margin-left: 5px;width:45%;">
             <i class="fa fa-angle-left" style="margin-right: 2%;"></i> Kembali
         </button>
@@ -41,7 +45,7 @@
    </button>
 </div>
 <nav class="navbar navbar-expand-lg mb-1" style="left: 0;height:60px;padding:10px;width:100%;background-color: #4DAAB9;position: fixed;top:0;">
-   <a class="navbar-brand" style="color: #FFFFFF;" routerLink="/upload_dokumen">
+   <a class="navbar-brand" style="color: #FFFFFF;">
       Daftar Kontrak
    </a>
 </nav>
