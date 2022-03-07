@@ -25,11 +25,11 @@ export class FormDataPribadiComponent implements OnInit {
   constructor(private apiservice:ApiServiceService, private actRoute : ActivatedRoute, private route:Router) { }
   
   dataPribadi = new FormGroup({
-    name      : new FormControl('', [Validators.required]),
+    name      : new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
     nik       : new FormControl('', [Validators.required, Validators.minLength(16)]),
     alamat    : new FormControl('', [Validators.required]),
-    provinsi  : new FormControl('', [Validators.required]),
-    kota      : new FormControl('', [Validators.required]),
+    provinsi  : new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
+    kota      : new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
     kode_pos  : new FormControl('', [Validators.required]),
     noTelp1   : new FormControl('', [Validators.required, Validators.minLength(11)]),
     noTelp2   : new FormControl('', [Validators.minLength(11)]),
@@ -140,9 +140,30 @@ export class FormDataPribadiComponent implements OnInit {
             localStorage.setItem('kota', kota);
             localStorage.setItem('kode_pos', kodepos);
             localStorage.setItem('notelp1', noTelp1);
-            localStorage.setItem('notelp2', noTelp2);
-            localStorage.setItem('no_rek_bca', no_rek_bca);
-            localStorage.setItem('keterangan', keterangan);
+            
+            if(noTelp2==null){
+              localStorage.setItem('notelp2', "");
+            }
+            else{
+              localStorage.setItem('notelp2', noTelp2);
+            }
+            
+            if(no_rek_bca==null){
+              localStorage.setItem('no_rek_bca', "");
+            }
+            else{
+              localStorage.setItem('no_rek_bca', no_rek_bca);
+            }
+            
+            if(keterangan==null){
+              localStorage.setItem('keterangan', "");
+            }
+            else{
+              localStorage.setItem('keterangan', keterangan);
+            }
+
+
+            
             this.route.navigate(["/upload_dokumen/", this.noKontrak, this.mail]);
         }
       );

@@ -2,47 +2,47 @@
 <div class="container" style="margin-top:65px;margin-bottom: 65px;">
     <div class="row" style="text-align: justify;padding: 5px;">
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="name"  placeholder="Nama Lengkap">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="name"  placeholder="Nama Lengkap">
            <span  *ngIf="name && name.touched && name.invalid" style="margin-top:5px;color:red;font-size: 12px;">Nama Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="nik" placeholder="NIK">
+           <input type="number" class="form-control" style="text-transform:uppercase" formControlName="nik" placeholder="NIK">
            <span  *ngIf="nik && nik.touched && nik.invalid" style="margin-top:5px;color:red;font-size: 12px;">NIK Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" formControlName="alamat" class="form-control" placeholder="Alamat">
+           <input type="text" formControlName="alamat" class="form-control" style="text-transform:uppercase" placeholder="Alamat">
            <span  *ngIf="alamat && alamat.touched && alamat.invalid" style="margin-top:5px;color:red;font-size: 12px;">Alamat Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="provinsi" placeholder="Provinsi">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="provinsi" placeholder="Provinsi">
            <span  *ngIf="provinsi && provinsi.touched && provinsi.invalid" style="margin-top:5px;color:red;font-size: 12px;">Provinsi Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="kota" placeholder="Kota">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="kota" placeholder="Kota">
            <span  *ngIf="kota && kota.touched && kota.invalid" style="margin-top:5px;color:red;font-size: 12px;">Kota/Kabupaten Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="kode_pos" placeholder="Kode Pos">
+           <input type="number" class="form-control" style="text-transform:uppercase" formControlName="kode_pos" placeholder="Kode Pos">
            <span  *ngIf="kode_pos && kode_pos.touched && kode_pos.invalid" style="margin-top:5px;color:red;font-size: 12px;">Kode Pos Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="noTelp1" placeholder="No Telepon 1">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="noTelp1" placeholder="No Telepon 1">
            <span  *ngIf="noTelp1 && noTelp1.touched && noTelp1.invalid" style="margin-top:5px;color:red;font-size: 12px;">No Telpon Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="noTelp2" placeholder="No Telepon 2 (Optional)">
+           <input type="number" class="form-control" style="text-transform:uppercase" formControlName="noTelp2" placeholder="No Telepon 2 (Optional)">
            <span  *ngIf="noTelp2 && noTelp2.touched && noTelp2.invalid" style="margin-top:5px;color:red;font-size: 12px;">No Telpon 2 Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="email" placeholder="Email">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="email" placeholder="Email">
            <span  *ngIf="email && email.touched && email.invalid" style="margin-top:5px;color:red;font-size: 12px;">Email Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="norek" placeholder="No Rekening BCA">
+           <input type="number" class="form-control" style="text-transform:uppercase" formControlName="norek" placeholder="No Rekening BCA">
            <span  *ngIf="norek && norek.touched && norek.invalid" style="margin-top:5px;color:red;font-size: 12px;">No Rekening Invalid</span>
         </div>
         <div class="form-group">
-           <input type="text" class="form-control" formControlName="keterangan" placeholder="Keterangan">
+           <input type="text" class="form-control" style="text-transform:uppercase" formControlName="keterangan" placeholder="Keterangan">
            <span  *ngIf="keterangan && keterangan.touched && keterangan.invalid" style="margin-top:5px;color:red;font-size: 12px;">Keterangan Invalid</span>
         </div>
     </div>

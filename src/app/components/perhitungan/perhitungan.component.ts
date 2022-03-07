@@ -12,6 +12,7 @@ export class PerhitunganComponent implements OnInit {
   noKontrak:string = "null";
   email:string="";
 
+
   constructor(private apiservice:ApiServiceService, private actRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
