@@ -31,8 +31,8 @@ export class FormDataPribadiComponent implements OnInit {
     provinsi  : new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
     kota      : new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
     kode_pos  : new FormControl('', [Validators.required]),
-    noTelp1   : new FormControl('', [Validators.required, Validators.minLength(11)]),
-    noTelp2   : new FormControl('', [Validators.minLength(11)]),
+    noTelp1   : new FormControl('', [Validators.required, Validators.minLength(11), Validators.pattern("^[0-9]*$")]),
+    noTelp2   : new FormControl('', [Validators.minLength(11), Validators.pattern("^[0-9]*$")]),
     email     : new FormControl('', [Validators.required,Validators.email]),
     norek     : new FormControl('', [Validators.minLength(10)]),
     keterangan: new FormControl('', [])
