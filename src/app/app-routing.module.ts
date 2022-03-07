@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CmsDetailComponent } from './components/cms-detail/cms-detail.component';
+import { CmsComponent } from './components/cms/cms.component';
 import { DataJaminanComponent } from './components/data-jaminan/data-jaminan.component';
 import { FormDataPribadiComponent } from './components/form-data-pribadi/form-data-pribadi.component';
 import { ListKontrakComponent } from './components/list-kontrak/list-kontrak.component';
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path : 'perhitungan/:id/:email', component : PerhitunganComponent},
   {path : 'form_data_pribadi/:id/:email', component : FormDataPribadiComponent},
   {path : 'data_jaminan/:id/:email', component : DataJaminanComponent},
-  {path : 'success/:email', component : SuccessPageComponent}
+  {path : 'success/:email', component : SuccessPageComponent},
+  {path : 'cms', component : CmsComponent},
+  {path : 'cms-detail/:id/:no_kontrak', component : CmsDetailComponent}
 ];
 
 @NgModule({

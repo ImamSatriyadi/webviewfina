@@ -1,0 +1,248 @@
+<div class="container" style="margin-top:65px;margin-bottom: 65px;">
+    <div class="card text-center">
+        <div class="card-header">
+            DETAIL DATA PENGAJUAN KONSUMEN OVER KREDIT
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <h5 style="text-align: center;margin-bottom: 15px;">Konsumen Lama</h5>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">No. Kontrak</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.no_kontrak}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Nama</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.nama}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Telepon/HP</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.no_telepon}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Status</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.loan_status}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <h6 style="text-align: start;">Jaminan Kendaraan</h6>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Merk</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.merk}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">type</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.type}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Tahun Kendaraan</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.tahun_kendaraan}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">No Polisi</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.no_polisi}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <h6 style="text-align: start;">Perhitungan Outstanding</h6>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Sisa Outstanding</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_outstanding + ' Bulan'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Sisa Tenor</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_tenor + ' Bulan'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Angsuran / Bulan</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.angsuran | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h5 style="text-align: center;margin-bottom: 15px;">Konsumen Baru</h5>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Nama</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataNewCustomer.nama}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Telepon / HP</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataNewCustomer.no_telp}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <h6 style="text-align: start;">Perhitungan Outstanding</h6>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Pokok Hutang</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_outstanding + ' Bulan'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Tenor</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_tenor + ' Bulan'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Tipe Pinjaman</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{'In Arrear'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Angsuran / Bulan</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.angsuran | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h5 style="text-align: center;margin-bottom: 15px;">Dokumen Konsumen Baru</h5>
+                    <table  datatable="ng" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td>No</td>
+                                <td>Nama Dokumen</td>
+                                <td>#</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dataDocuments of dataDocument; let indexElement=index;">
+                                <td>{{indexElement+1}}</td>
+                                <td style="text-align: left;">{{dataDocuments.name}}</td>
+                                <td>
+                                    <a href="{{dataDocuments.path_doc}}">
+                                        <button class="btn btn-primary"> Download</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <h5 style="text-align: start;margin-bottom: 15px;">Perhitungan Bunga</h5>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">OTR</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.otr  | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">Down Payment</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.otr-dataOldCustomer.sisa_outstanding | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                        <div class="col-sm-2">
+                          <input type="text" readonly class="form-control" ngModel="{{(dataOldCustomer.otr-dataOldCustomer.sisa_outstanding)/dataOldCustomer.otr*100 | number:'1.0-6'}} %"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">Pokok Hutang</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_outstanding  | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">Angsuran</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.angsuran  | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">Tenor</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control" ngModel="{{dataOldCustomer.sisa_tenor  + ' Bulan'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-2 col-form-label">Effective Rate</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.efectiveRate  + ' %'}}"id="staticEmail" >
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <h5 style="text-align: start;margin-bottom: 15px;">Biaya Dan Kewajiban Yang Harus Dilunasi</h5>
+                <div class="col-4">
+                    <h5 style="text-align: start;margin-bottom: 15px;">Konsumen Lama</h5>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Angsuran</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.angsuran | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Denda</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.denda | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Gantungan Biaya Pengurusan STNK/BPKB</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.gantungan_pengurusan | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Gantungan Biaya Penangguangan Asuransi</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.gantungan_asuransi | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Deposit</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.deposit | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Total</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly  style="font-weight: bold" class="form-control" ngModel="{{dataPerhitungan.angsuran + dataPerhitungan.denda + dataPerhitungan.gantungan_pengurusan + dataPerhitungan.gantungan_asuransi - dataPerhitungan.deposit  | currency:'Rp ':'symbol':'3.0'}}" id="staticEmail" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h5 style="text-align: start;margin-bottom: 15px;">Konsumen Baru</h5>
+                    <div class="form-group row mb-1">
+                        <label for="staticEmail" style="text-align: left;" class="col-sm-4 col-form-label">Biaya Admin</label>
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="form-control" ngModel="{{dataPerhitungan.admin | currency:'Rp ':'symbol':'3.0'}}"id="staticEmail" >
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+      </div>
+</div>
+<nav class="navbar navbar-expand-lg mb-1" style="left: 0;height:60px;padding:10px;width:100%;background-color: #4DAAB9;position: fixed;top:0;">
+    <a class="navbar-brand" style="color: #FFFFFF;">
+      CMS Over Kredit
+    </a>
+    <a class="navbar-brand" routerLink="/cms" style="float:right;color: #FFFFFF;">
+        Data
+    </a>
+ </nav>

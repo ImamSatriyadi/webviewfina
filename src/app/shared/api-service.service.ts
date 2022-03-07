@@ -28,6 +28,27 @@ export class ApiServiceService {
     let URL_API  = DOMAIN_API+"/csf/perhitungan?no_kontrak="+no_kontrak;
     return this.http.get(URL_API, header)
   }
+
+  dataPengajuan(){
+    let URL_API  = DOMAIN_API+"/newcustomer/showData";
+    return this.http.get(URL_API, header)
+  }
+  getNoKontrak(id:number){
+    let URL_API  = DOMAIN_API+"/newcustomer/getNoKontrak?id_new_customer="+id;
+    return this.http.get(URL_API, header)
+  }
+  getOldCustomer(no_kontrak:string){
+    let URL_API  = DOMAIN_API+"/csf/showDataById?no_kontrak="+no_kontrak;
+    return this.http.get(URL_API, header)
+  }
+  getNewCustomer(id:number){
+    let URL_API  = DOMAIN_API+"/newcustomer/showDataById?id_new_customer="+id;
+    return this.http.get(URL_API, header)
+  }
+  getDocument(id:number){
+    let URL_API  = DOMAIN_API+"/newcustomer/showDataDocument?id_new_customer="+id;
+    return this.http.get(URL_API, header)
+  }
   
   //  uploadFile(file:File, no_kontrak:string){
   //    let URL_API  = DOMAIN_API+"/newcustomer/upload";
