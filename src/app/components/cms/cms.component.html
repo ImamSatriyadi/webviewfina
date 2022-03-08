@@ -21,7 +21,12 @@
                         <td style="text-align: left;">{{datas.nama}}</td>
                         <td style="text-align: left;">{{datas.no_telp}}</td>
                         <td>
-                            <button class="btn btn-primary" (click)="detail(datas.id)"> Detail </button>
+                            <button class="btn btn-primary"  (click)="detail(datas.id)"> Detail </button>
+                             <select class="btn btn-success ms-2" #status (change)="changeStatus(status.value, datas.id)">
+                                 <option>Update Status Pengajuan</option>
+                                 <option value="SEDANG DI PROSES">SEDANG DI PROSES</option>
+                                 <option value="SELESAI">SELESAI</option>
+                             </select>   
                         </td>
                     </tr>
                 </tbody>

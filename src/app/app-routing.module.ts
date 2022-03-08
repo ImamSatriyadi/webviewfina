@@ -18,7 +18,7 @@ const routes: Routes = [
   {path : 'perhitungan/:id/:email', component : PerhitunganComponent},
   {path : 'form_data_pribadi/:id/:email', component : FormDataPribadiComponent},
   {path : 'data_jaminan/:id/:email', component : DataJaminanComponent},
-  {path : 'success/:email', component : SuccessPageComponent},
+  {path : 'success/:id/:email', component : SuccessPageComponent},
   {path : 'cms', component : CmsComponent},
   {path : 'cms-detail/:id/:no_kontrak', component : CmsDetailComponent}
 ];

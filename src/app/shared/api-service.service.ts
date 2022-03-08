@@ -49,6 +49,14 @@ export class ApiServiceService {
     let URL_API  = DOMAIN_API+"/newcustomer/showDataDocument?id_new_customer="+id;
     return this.http.get(URL_API, header)
   }
+  getIdNewCustomer(no_kontrak:string){
+    let URL_API  = DOMAIN_API+"/newcustomer/showIdNewCustomer?no_kontrak="+no_kontrak;
+    return this.http.get(URL_API, header)
+  }
+  changeStatusPengajuan(status:string, no_kontrak:string){
+    let URL_API  = DOMAIN_API+"/csf/updateStatusPengajuan?status="+status+"&no_kontrak="+no_kontrak;
+    return this.http.get(URL_API, header)
+  }
   
   //  uploadFile(file:File, no_kontrak:string){
   //    let URL_API  = DOMAIN_API+"/newcustomer/upload";

@@ -12,6 +12,7 @@ export class ListKontrakComponent implements OnInit {
   kontrak: any;
   selectContract:string="";
   email:string="";
+  id:any;
 
   constructor(private apiservice:ApiServiceService, private actRoute:ActivatedRoute, private router:Router) { }
 
@@ -37,6 +38,15 @@ export class ListKontrakComponent implements OnInit {
 
   direct(contract:string){
     this.router.navigate(["/perhitungan/", contract, this.email]);
+  }
+
+  showId(no_kontrak:string){
+     this.apiservice.getIdNewCustomer(no_kontrak)
+    .subscribe((res:any)=>{
+      this.id=res;
+      })
+
+      return this.id;
   }
   rollBack(){
     return this.apiservice.rollBack()

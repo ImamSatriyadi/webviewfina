@@ -9,13 +9,16 @@ import { ApiServiceService } from 'src/app/shared/api-service.service';
 export class CmsComponent implements OnInit {
   data:any;
   no_kontrak:any;
+  dataOldCustomer:any;
 
+  datac:any;
   constructor(private apiservice:ApiServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.showData();
   }
 
+  
   showData(){
     return this.apiservice.dataPengajuan()
     .subscribe((res:any)=>{
@@ -23,6 +26,8 @@ export class CmsComponent implements OnInit {
         console.log(res);
     })
   }
+
+
 
   detail(id:number){
       console.log(id);
@@ -32,5 +37,15 @@ export class CmsComponent implements OnInit {
           console.log(this.no_kontrak);
           this.router.navigate(['/cms-detail', id, this.no_kontrak]);
       })
+  }
+  changeStatus(status:string, id:number){
+    return this.apiservice.getNoKontrak(id)
+    .subscribe((res:any)=>{
+        this.no_kontrak =  res;
+        this.apiservice.changeStatusPengajuan(status, this.no_kontrak)
+        .subscribe((res:any)=>{
+          window.location.reload();
+        })
+    })
   }
 }

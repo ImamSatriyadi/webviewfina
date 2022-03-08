@@ -123,6 +123,6 @@ export class UploadDokumenComponent implements OnInit {
       );
    }}
    localStorage.clear();
-   this.router.navigate(['/success', this.email]);
+   this.router.navigate(['/success', this.noKontrak ,this.email]);
 }
 }
