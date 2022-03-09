@@ -41,12 +41,10 @@ export class ListKontrakComponent implements OnInit {
   }
 
   showId(no_kontrak:string){
-     this.apiservice.getIdNewCustomer(no_kontrak)
+     return this.apiservice.getIdNewCustomer(no_kontrak)
     .subscribe((res:any)=>{
-      this.id=res;
       })
 
-      return this.id;
   }
   rollBack(){
     return this.apiservice.rollBack()
