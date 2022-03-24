@@ -15,6 +15,8 @@ import { PerhitunganComponent } from './components/perhitungan/perhitungan.compo
 import { SuccessPageComponent } from './components/success-page/success-page.component';
 import { CmsComponent } from './components/cms/cms.component';
 import { CmsDetailComponent } from './components/cms-detail/cms-detail.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CmsDetailComponent } from './components/cms-detail/cms-detail.component
     PerhitunganComponent,
     SuccessPageComponent,
     CmsComponent,
-    CmsDetailComponent
+    CmsDetailComponent,
+    NotFoundComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
